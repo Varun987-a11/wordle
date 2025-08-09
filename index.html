@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="wordle.css">
-    <title>Wordle Game</title>
-</head><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="wordle.css">
-    <title>Wordle Game</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="wordle.css" />
+  <title>Wordle Game — Welcome</title>
 </head>
+<body class="page-center">
+  <main>
+    <h1 id="title">Wordle Game</h1>
+    <p class="lead">A simple browser-based Wordle clone. Guess the 5-letter word in 6 tries.</p>
 
-</html>
-<body style="background-color: rgb(197, 197, 129);">
-    <h1>Welcome to the Wordle Game!</h1>
-    <h2 id="answer" class="message"></h2> <!-- Added class for message styling -->
-    <button id="startButton" style="background-color: #ff300c; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer;">Start Game</button>
+    <div class="controls">
+      <a class="btn" href="wordle.html" id="startButton">Start Game</a>
+      <a class="btn muted" href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noopener">Source</a>
+    </div>
 
-    <script>
-        document.getElementById("startButton").addEventListener("click", function() {
-            window.location.href = "wordle.html"; // Redirect to the game page
-        });
-    </script>
+    <footer class="small">
+      Made with HTML, CSS &amp; JavaScript — for learning &amp; fun.
+    </footer>
+  </main>
 </body>
 </html>
