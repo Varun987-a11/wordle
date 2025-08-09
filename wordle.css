@@ -1,0 +1,186 @@
+body {
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    text-align: center;
+}
+
+hr {
+    width: 500px;
+}
+body {
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    text-align: center;
+}
+
+hr {
+    width: 500px;
+}
+
+#title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#board {
+    width: 350px;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    /* Box */
+    border: 2px solid rgb(4, 4, 4);
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    /* Text */
+    color: rgb(220, 12, 12);
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.correct {
+    background-color: #6AAA64;
+    color: rgb(226, 12, 12);
+    border-color: white;
+}
+
+.present {
+    background-color: #C9B458;
+    color: rgb(181, 169, 169);
+    border-color: rgb(44, 194, 249);
+}
+
+.absent {
+    background-color: #787C7E;
+    color: white;
+    border-color:white;
+}
+
+/* General styles for the body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #00ffe5;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for messages */
+.message {
+    font-family: 'Arial Black', sans-serif; /* Change to your desired font */
+    font-size: 150px; /* Change to your desired font size */
+    color: #000000; /* Change to your desired text color */
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+/* Style for the reload button */
+#reloadButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff; /* Attractive blue color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reloadButton:hover {
+    background-color: #6f35f4; /* Darker blue on hover */
+}
+
+#title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#board {
+    width: 350px;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    /* Box */
+    border: 2px solid rgb(4, 4, 4);
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    /* Text */
+    color: rgb(220, 12, 12);
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.correct {
+    background-color: #6AAA64;
+    color: rgb(226, 12, 12);
+    border-color: white;
+}
+
+.present {
+    background-color: #C9B458;
+    color: rgb(181, 169, 169);
+    border-color: rgb(44, 194, 249);
+}
+
+.absent {
+    background-color: #787C7E;
+    color: white;
+    border-color:white;
+}
+
+/* General styles for the body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #00ffe5;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for messages */
+.message {
+    font-family: 'Arial Black', sans-serif; /* Change to your desired font */
+    font-size: 150px; /* Change to your desired font size */
+    color: #000000; /* Change to your desired text color */
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+/* Style for the reload button */
+#reloadButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff; /* Attractive blue color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reloadButton:hover {
+    background-color: #6f35f4; /* Darker blue on hover */
+}
