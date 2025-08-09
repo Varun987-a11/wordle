@@ -10,8 +10,7 @@ Play directly in your browser — no installs needed!
   - 🟨 **Yellow** = letter is in the word but in the wrong spot.
   - ⬜ **Gray** = letter is not in the word at all.
 
-## Live Demo
-##[Play it here](https://Varun987-a11.github.io/wordle/)  
+
 
 ## Files
 - `index.html` → Welcome screen
