@@ -1,186 +1,106 @@
-body {
-    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
-    text-align: center;
+:root{
+  --tile-size: 64px;
+  --gap: 8px;
+  --board-width: calc((var(--tile-size) * 5) + (var(--gap) * 4));
+  --bg: #f0f6f5;
+  --accent: #ff300c;
+  --green: #6AAA64;
+  --yellow: #C9B458;
+  --gray: #787C7E;
+  --tile-border: #111;
 }
 
-hr {
-    width: 500px;
-}
-body {
-    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
-    text-align: center;
-}
-
-hr {
-    width: 500px;
-}
-
-#title {
-    font-size: 36px;
-    font-weight: bold;
-    letter-spacing: 2px;
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg,#eafaf6,#f6fff9);
+  color:#111;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-#board {
-    width: 350px;
-    height: 420px;
-    margin: 0 auto;
-    margin-top: 3px;
-    display: flex;
-    flex-wrap: wrap;
+/* Centering layout */
+.page-center, .game-area {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:24px;
+  gap:16px;
 }
 
-.tile {
-    /* Box */
-    border: 2px solid rgb(4, 4, 4);
-    width: 60px;
-    height: 60px;
-    margin: 2.5px;
+/* Title & text */
+#title{
+  font-size:1.6rem;
+  letter-spacing:1px;
+  margin:0 0 8px 0;
+}
+.lead{margin:0 0 16px 0; color:#334;}
 
-    /* Text */
-    color: rgb(220, 12, 12);
-    font-size: 36px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Controls / buttons */
+.controls{display:flex; gap:10px; margin-top:12px; align-items:center;}
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn.muted{background:#e8eef0; color:#123; border:1px solid #d6dbe0;}
+.small{font-size:0.85rem; opacity:0.8; margin-top:12px}
+
+/* Board sizing & tiles */
+#board{
+  width:var(--board-width);
+  display:grid;
+  grid-template-columns:repeat(5, var(--tile-size));
+  grid-template-rows:repeat(6, var(--tile-size));
+  gap:var(--gap);
+  align-content:center;
+  margin:10px 0;
 }
 
-.correct {
-    background-color: #6AAA64;
-    color: rgb(226, 12, 12);
-    border-color: white;
+/* Tile */
+.tile{
+  width:var(--tile-size);
+  height:var(--tile-size);
+  border:2px solid var(--tile-border);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:1.5rem;
+  text-transform:uppercase;
+  background:white;
+  user-select:none;
 }
 
-.present {
-    background-color: #C9B458;
-    color: rgb(181, 169, 169);
-    border-color: rgb(44, 194, 249);
+/* Colors for states */
+.correct{ background:var(--green); color:white; border-color:transparent; }
+.present{ background:var(--yellow); color:white; border-color:transparent; }
+.absent{ background:var(--gray); color:white; border-color:transparent; }
+
+/* Message */
+.message{
+  min-height:1.5em;
+  font-weight:700;
+  margin-top:6px;
+  color:#0a0a0a;
 }
 
-.absent {
-    background-color: #787C7E;
-    color: white;
-    border-color:white;
+/* Responsive tweaks */
+@media (max-width:420px){
+  :root{ --tile-size:52px; --gap:6px }
+  #title{ font-size:1.2rem; }
 }
 
-/* General styles for the body */
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #00ffe5;
-    font-family: Arial, sans-serif;
-}
-
-/* Style for messages */
-.message {
-    font-family: 'Arial Black', sans-serif; /* Change to your desired font */
-    font-size: 150px; /* Change to your desired font size */
-    color: #000000; /* Change to your desired text color */
-    margin: 10px 0; /* Add some margin for spacing */
-}
-
-/* Style for the reload button */
-#reloadButton {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #007bff; /* Attractive blue color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#reloadButton:hover {
-    background-color: #6f35f4; /* Darker blue on hover */
-}
-
-#title {
-    font-size: 36px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-#board {
-    width: 350px;
-    height: 420px;
-    margin: 0 auto;
-    margin-top: 3px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.tile {
-    /* Box */
-    border: 2px solid rgb(4, 4, 4);
-    width: 60px;
-    height: 60px;
-    margin: 2.5px;
-
-    /* Text */
-    color: rgb(220, 12, 12);
-    font-size: 36px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.correct {
-    background-color: #6AAA64;
-    color: rgb(226, 12, 12);
-    border-color: white;
-}
-
-.present {
-    background-color: #C9B458;
-    color: rgb(181, 169, 169);
-    border-color: rgb(44, 194, 249);
-}
-
-.absent {
-    background-color: #787C7E;
-    color: white;
-    border-color:white;
-}
-
-/* General styles for the body */
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #00ffe5;
-    font-family: Arial, sans-serif;
-}
-
-/* Style for messages */
-.message {
-    font-family: 'Arial Black', sans-serif; /* Change to your desired font */
-    font-size: 150px; /* Change to your desired font size */
-    color: #000000; /* Change to your desired text color */
-    margin: 10px 0; /* Add some margin for spacing */
-}
-
-/* Style for the reload button */
-#reloadButton {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #007bff; /* Attractive blue color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#reloadButton:hover {
-    background-color: #6f35f4; /* Darker blue on hover */
-}
+/* Small helper for hidden element (JS toggles) */
+.hidden{ display:none !important; }
