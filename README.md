@@ -11,7 +11,7 @@ Play directly in your browser — no installs needed!
   - ⬜ **Gray** = letter is not in the word at all.
 
 ## Live Demo
-[Play it here](https://Varun987-a11.github.io/wordle/)  
+##[Play it here](https://Varun987-a11.github.io/wordle/)  
 
 ## Files
 - `index.html` → Welcome screen
